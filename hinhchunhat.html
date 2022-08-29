@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="hinh"></canvas>
+    <script>
+        class Rectangle{
+            height;
+            weight;
+            constructor(weight,height)
+            {
+                this.weight=weight;
+                this.height=height;
+            }
+           getWeight(){
+            return this.weight;
+           }
+           getHeight(){
+            return this.height;
+           }
+           setWeight(weight){
+            this.weight=weight;
+           }
+           setHeight(height){
+            this.height=height;
+           }
+            dientich() {
+                return this.height*this.weight;
+                
+            }
+            chuvi(){
+                return (this.weight+this.height)*2;
+            }
+            
+            show(){
+                let canvas = document.getElementById("hinh");
+let ctx = canvas.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0, 0,this.weight,this.height);
+
+            }
+        }
+        let chunhat1= new Rectangle(200,100);
+        chunhat1.show();
+        
+    </script>
+</body>
+</html>
